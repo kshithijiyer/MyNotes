@@ -1,4 +1,4 @@
-# How to Commment?
+# How to Comment?
 ## This file has the syntax for comments in different programming languages.
 1. Python
 ```
