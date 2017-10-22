@@ -1,6 +1,6 @@
 # How to Commment?
 ## This file has the syntax for comments in different programming languages.
-1. Pyhon
+1. Python
 ```
 # Single Line comment 
 """Multi Line comment"""
