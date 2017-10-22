@@ -67,3 +67,10 @@
 Multi Line comment
 =end
 ```
+15. MATLAB
+```
+% Single Line comment
+%{
+Multi Line comment
+}%
+```
