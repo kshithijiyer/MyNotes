@@ -16,5 +16,6 @@
 15. Make sure that no document which is valuable to your career or your company is left on you desk exposed for anyone and everyone to read when you leave.
 
 ```
-        When it comes to corporate cyber security don't trust anyone! ;)
+        When it comes to corporate cyber security,
+        don't trust anyone! ;)
 ```
