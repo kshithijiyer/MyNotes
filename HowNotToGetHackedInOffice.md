@@ -13,7 +13,7 @@
 12. When it comes to workplace the less people know the better, don't tell anyone where you sit if not needed.
 13. Avoid taking selfies in office and posting them on social media and specially in such a way where the hardware you use is visible. 
 14. Don't use password managers, use your brain to store passwords.
-15. Make sure that no document which is valuable to your career or your company is left on you desk exposed for anyone and everyone to read when you leave.
+15. Make sure that no document which is valuable to your career or your company is left on your desk exposed for anyone and everyone to read when you leave.
 
 ```
         When it comes to corporate cyber security,
