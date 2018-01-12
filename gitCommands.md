@@ -1,4 +1,4 @@
-Step by step guide for git:
+# Step by step guide for git:
 1. Initialize.
 ```
 git init
