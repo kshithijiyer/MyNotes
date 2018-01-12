@@ -20,3 +20,7 @@ git commit -m "updated"
 ```
 git push -f origin master
 ```
+6. Download for github
+```
+git clone https://github.com/kshithijiyer/MyNotes.git
+```
