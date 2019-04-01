@@ -53,14 +53,14 @@ To install glusto-tests dependencies:
 --------------------------------------------------
 - `python-docx` needs to be installed when we run IO's and validates on client node.
     - To install run :
-    
+
 			    # curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
 			    # python get-pip.py
 			    # pip install --pre python-docx
 
 - `arequal` needs to be installed on all servers and clients.
 	- To install download the below repo into /etc/yum.repos.d/
-	
+
 			# wget https://copr.fedorainfracloud.org/coprs/nigelbabu/arequal/repo/epel-7/nigelbabu-arequal-epel-7.repo
 			# yum install arequal
 
@@ -74,7 +74,7 @@ Pre-requisites to run glusto-tests:
 - Setup bricks on all servers:
 	- To create bricks refer to [doc](https://gluster.readthedocs.io/en/latest/Administrator%20Guide/formatting-and-mounting-bricks/)
 
-Note: 
+Note:
 
 	- To run cifs protocol:
 		1.CIFS packages need to be installed on the server
@@ -83,23 +83,23 @@ Note:
 	- To run nfs protocol, nfs packages must be installed on server and client
 
  For more info how to run glusto-tests from the scratch including creating OS, server, etc.. refer [link](https://github.com/gluster/glusto-tests/blob/master/docs/userguide/HOWTO)
- 
+
 How to run the test case:
 ----------------------------------
 -  Update the information about the servers, clients, servers_info, client_info on the [config_file](https://github.com/gluster/glusto-tests/blob/master/tests/gluster_basic_config.yml), this information is enough to run all test cases. But if you need to override the default values of volumes, mount.. etc which is defined in gluster_base_class then use  [config](https://github.com/gluster/glusto-tests/blob/master/tests/gluster_tests_config.yml) and update the information accordingly.
 Refer the following for more info [link](http://glusto.readthedocs.io/en/latest/userguide/configurable.html).
 
 -   glusto-tests are run using the `glusto` command available after installing the glusto framework. The various options to run tests as provided by glusto framework: PyUnit Tests, PyTest Tests, Nose Tests.
-The most common used is Pytest. 
+The most common used is Pytest.
 	- **Running PyTest Tests**
 		- To run all tests that are marked with tag 'bvt':
-			
+
 				# glusto -c config.yml --pytest='-v -x tests -m bvt'
 		- To run all tests that are under bvt folder:
-			
+
 				# glusto -c config.yml --pytest='-v -s bvt/'
 		- To run a single test case:
-			
+
 				# glusto -c config.yml --pytest='-v -s -k test_demo1'
 
 For more info about running tests on PyUnit, Pytest and Nose Tests, refer the [docs](http://glusto.readthedocs.io/en/latest/userguide/glusto.html#options-for-running-unit-tests).
@@ -117,18 +117,18 @@ Testcases name and file name should should start with **test_**.
 - Please follow the [PEP008 style-guide](https://www.python.org/dev/peps/pep-0008/).
 - Makes sure all the pylint and pyflakes error are fixed.
 	For example
-	
+
 		- C0326: Exactly one space required around assignment
 		- C0111: Missing module doc-string (missing-doc string)
 		- W: 50: Too long line
-		   
+
 	For more information on [pylint](https://docs.pylint.org/en/1.6.0/tutorial.html) and on [pyflakes](http://flake8.pycqa.org/en/latest/user/error-codes.html).
 	We can check for pyflakes and pylint errors:
 	```
-	# flake8  
+	# flake8 <test_script.py>
 	or
-	# flake8 
-	# pylint -j 4 --rcfile=/glusto-tests/.pylintrc 
+	# flake8 <path_to_directory>
+	# pylint -j 4 --rcfile=/glusto-tests/.pylintrc <test_script.py>
 	```
 - Optimize the code as much as possible. Eliminate the repetitive steps, write it has separate function.
 - Use proper python standards on returning values. This style guide is a list of do's and don’ts for[ Python programs](http://google.github.io/styleguide/pyguide.html).
@@ -147,28 +147,27 @@ For example: This is an example of a module level function
            The return value of the function.
        """
   ```
-       
+
 - Make sure the log messages are grammatically correct and have no spelling mistakes.
 
 - Comment every step of the test case/libraries, log the test step, test result, failure and success.
 For example:
    ```
    def test_peer_status(self):
-   # peer status from mnode
-   g.log.info("Get peer status from node %s", self.mnode)
-   ret, out, err = peer_status(self.mnode)
-   self.assertEqual(ret, 0, "Failed to get peer status from node %s: %s" % (self.mnode, err))
-   g.log.info("Successfully got peer status from node %s:\n%s", self.mnode, out)
+       # peer status from mnode
+       g.log.info("Get peer status from node %s", self.mnode)
+       ret, out, err = peer_status(self.mnode)
+       self.assertEqual(ret, 0, "Failed to get peer status from node %s: %s" % (self.mnode, err))
+       g.log.info("Successfully got peer status from node %s:\n%s", self.mnode, out)
    ```
- 
+
+
 - Don't not use print statements in test-cases/libraries because prints statements are not captured in log files. Use logger functions to dump messages into log file.
 
 For more info how to write testcases [developing-guide](https://github.com/gluster/glusto-tests/blob/master/docs/userguide/developer-guide.rst)
 
-
-
 Logging:
-----------------------------------
+--------------
 Log file name and Log level can be passed as argument to glusto command while
 running the glusto-tests. For example:
 
