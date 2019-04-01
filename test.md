@@ -159,7 +159,7 @@ For example:
    ret, out, err = peer_status(self.mnode)
    self.assertEqual(ret, 0, "Failed to get peer status from node %s: %s" % (self.mnode, err))
    g.log.info("Successfully got peer status from node %s:\n%s", self.mnode, out)
- ```
+   ```
  
 - Don't not use print statements in test-cases/libraries because prints statements are not captured in log files. Use logger functions to dump messages into log file.
 
