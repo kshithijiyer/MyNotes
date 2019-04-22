@@ -59,7 +59,9 @@ How to install gdeploy and run gdeploy:
     server-vm6    
     ``` 
 -   Run gdeploy using the below command:
-    ```gdeploy -c gdeploy_sample_config.conf```
+    ```
+    gdeploy -c gdeploy_sample_config.conf
+    ```
 
 To install glusto-tests dependencies:
 --------------------------------------------------
