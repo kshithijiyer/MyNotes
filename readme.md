@@ -73,9 +73,7 @@ Pre-requisites to run glusto-tests:
 - Setup passwordless ssh from the glusto-tests management node to all.
 - Install glusto-tests dependencies on servers and clients.
 - Setup bricks on all servers:
-  To create bricks refer to [doc](https://gluster.readthedocs.io/en/latest/Administrator%20Guide/formatting-and-mounting-bricks/)
-  OR 
-  Run gdeploy as shown below.
+  - To create bricks refer to [doc](https://gluster.readthedocs.io/en/latest/Administrator%20Guide/formatting-and-mounting-bricks/) **OR** Run gdeploy as shown below.
 1. Edit the `gdeploy_sample_config.conf` present in `examples` as shown below and also configure password lessssh to all servers: 
     ```
     [hosts]
