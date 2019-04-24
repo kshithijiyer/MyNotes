@@ -75,8 +75,8 @@ Pre-requisites to run glusto-tests:
 - Setup bricks on all servers:
 	- To create bricks refer to [doc](https://gluster.readthedocs.io/en/latest/Administrator%20Guide/formatting-and-mounting-bricks/)
                        OR
-        - Run gdeploy as shown in the earlier section.
-	1. Edit the `gdeploy_sample_config.conf` present in `examples` as shown below and also configure password less ssh on to all servers:
+       - Run gdeploy as shown below:
+	1. Edit the `gdeploy_sample_config.conf` present in `examples` as shown below and also configure password lessssh to all servers: 
     ```
     [hosts]
     server-vm1
@@ -85,7 +85,15 @@ Pre-requisites to run glusto-tests:
     server-vm4
     server-vm5
     server-vm6
+
+    [backend-setup] 
+    devices 
+    vgs
+    pools
+    lvs
+    mountpoints
     ```
+     For more details you can view a sample config file avaliable at ``/usr/share/doc/gdeploy/examples/gluster.conf.sample`` which will be installed with gdeploy.
      2. Run gdeploy using the below command:
     ```
     gdeploy -c gdeploy_sample_config.conf
