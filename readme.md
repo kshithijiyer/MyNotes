@@ -49,6 +49,7 @@ How to install gdeploy:
 --------------------------------
 -   Install latest version of gdeploy from the following [link](https://copr.fedorainfracloud.org/coprs/sac/gdeploy/package/gdeploy/).
 
+
 To install glusto-tests dependencies:
 --------------------------------------------------
 - `python-docx` needs to be installed when we run IO's and validates on client node.
@@ -74,25 +75,21 @@ Pre-requisites to run glusto-tests:
 - Setup bricks on all servers:
 	- To create bricks refer to [doc](https://gluster.readthedocs.io/en/latest/Administrator%20Guide/formatting-and-mounting-bricks/)
                        OR
-        - Run gdeploy as shown below.
-	1. Edit the `gdeploy_sample_config.conf` present in `examples` as shown below and also configure password lessssh to all serevers:
-	```[hosts] 
-	  server-vm1
-	  server-vm2
-    	  server-vm3
-    	  server-vm4
-    	  server-vm5
-    	  server-vm6
-          [backend-setup]
-	  devices
-	  vgs 
-	  pools
-	  lvs
-	  mountpoints
-	```
-        2. Run gdeploy using the below command:
-          ```# gdeploy -c gdeploy_sample_config.conf```
-
+        - Run gdeploy as shown in the earlier section.
+	1. Edit the `gdeploy_sample_config.conf` present in `examples` as shown below and also configure password less ssh on to all servers:
+    ```
+    [hosts]
+    server-vm1
+    server-vm2
+    server-vm3
+    server-vm4
+    server-vm5
+    server-vm6
+    ```
+     2. Run gdeploy using the below command:
+    ```
+    gdeploy -c gdeploy_sample_config.conf
+    ```
 Note:
 
 	- To run cifs protocol:
