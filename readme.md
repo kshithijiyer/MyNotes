@@ -93,7 +93,8 @@ Pre-requisites to run glusto-tests:
     lvs
     mountpoints
     ```
-     For more details you can view a sample config file avaliable at ``/usr/share/doc/gdeploy/examples/gluster.conf.sample`` which will be installed with gdeploy.
+     __Note:__ For more details you can view a sample config file avaliable at ``/usr/share/doc/gdeploy/examples/gluster.conf.sample`` which will be installed with gdeploy.
+
      2. Run gdeploy using the below command:
     ```
     gdeploy -c gdeploy_sample_config.conf
