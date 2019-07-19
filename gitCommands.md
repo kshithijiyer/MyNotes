@@ -24,3 +24,11 @@ git push -f origin master
 ```
 git clone https://github.com/kshithijiyer/MyNotes.git
 ```
+7. Adding a fork
+```
+git remote add fork https://github.com/<username>/repo
+```
+8. Pushing to fork repo
+```
+git push fork <BranchName>
+```
