@@ -32,3 +32,13 @@ git remote add fork https://github.com/<username>/repo
 ```
 git push fork <BranchName>
 ```
+9. Adding command to squash commits
+```
+git rebase -i HEAD~x
+x: the number of pactches you want to squash
+```
+10. Reset all code on master
+```
+git reset --hard gerrit/master
+gerrit should be changes to origin if the repo is on github.
+```
